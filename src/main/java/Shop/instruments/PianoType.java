@@ -1,4 +1,4 @@
-package instruments;
+package Shop.instruments;
 
 public enum PianoType {
 

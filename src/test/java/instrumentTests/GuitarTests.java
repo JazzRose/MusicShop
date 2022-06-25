@@ -1,7 +1,7 @@
 package instrumentTests;
 
-import instruments.Guitar;
-import instruments.InstrumentType;
+import Shop.instruments.Guitar;
+import Shop.instruments.InstrumentType;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -57,5 +57,15 @@ public class GuitarTests {
     public void canChangeSalePrice(){
         guitar1.setSalePrice(1800.00);
         assertEquals(1800.00,guitar1.getSalePrice(),0.00);
+    }
+
+    @Test
+    public void canPlayATune(){
+        assertEquals("Strum Strum Strum", guitar1.play());
+    }
+
+    @Test
+    public void canCalculateMarkup(){
+        assertEquals(400.00,guitar1.calculateMarkup(),0.00);
     }
 }

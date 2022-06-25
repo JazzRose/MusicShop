@@ -1,4 +1,4 @@
-package instruments;
+package Shop.instruments;
 
 public class Guitar extends Instrument{
 
@@ -24,4 +24,5 @@ public class Guitar extends Instrument{
         return "Strum Strum Strum";
 
     }
+
 }

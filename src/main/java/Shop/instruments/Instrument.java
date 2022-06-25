@@ -1,6 +1,8 @@
-package instruments;
+package Shop.instruments;
 
-public abstract class Instrument implements IPlay{
+import Shop.ISell;
+
+public abstract class Instrument implements IPlay, ISell {
 
     private String name;
     private double salePrice;
@@ -77,5 +79,9 @@ public abstract class Instrument implements IPlay{
 
     public void setMaterial(String material) {
         this.material = material;
+    }
+
+    public double calculateMarkup(){
+       return salePrice - purchasePrice;
     }
 }
