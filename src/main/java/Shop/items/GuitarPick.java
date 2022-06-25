@@ -1,5 +1,7 @@
 package Shop.items;
 
+import Shop.ISell;
+
 public class GuitarPick extends NonInstruments{
 
     private String name;
@@ -32,4 +34,5 @@ public class GuitarPick extends NonInstruments{
     public double getThickness() {
         return thickness;
     }
+
 }
