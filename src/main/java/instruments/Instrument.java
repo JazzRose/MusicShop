@@ -1,18 +1,42 @@
 package instruments;
 
-public abstract class Instrument {
+public abstract class Instrument implements IPlay{
 
     private String name;
     private double salePrice;
     private double purchasePrice;
-    private Type type;
+    private InstrumentType type;
     private String material;
+    private String manufacturer;
+    private String model;
 
-    public Instrument(double salePrice, double purchasePrice, Type type, String material) {
+    public Instrument(double salePrice, double purchasePrice, InstrumentType type, String material, String manufacturer, String model) {
         this.salePrice = salePrice;
         this.purchasePrice = purchasePrice;
         this.type = type;
         this.material = material;
+        this.manufacturer = manufacturer;
+        this.model = model;
+    }
+
+    public void setPurchasePrice(double purchasePrice) {
+        this.purchasePrice = purchasePrice;
+    }
+
+    public String getManufacturer() {
+        return manufacturer;
+    }
+
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
     }
 
     public String getName() {
@@ -39,11 +63,11 @@ public abstract class Instrument {
         this.purchasePrice = purchasePrice;
     }
 
-    public Type getType() {
+    public InstrumentType getType() {
         return type;
     }
 
-    public void setType(Type type) {
+    public void setType(InstrumentType type) {
         this.type = type;
     }
 
